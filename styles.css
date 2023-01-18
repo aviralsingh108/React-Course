@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border: 2px solid black;
+}
+.nav-items > ul{
+    list-style-type: none;
+    display: flex;
+}
+.nav-items > ul > li{
+    padding: 10px;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+}
+
+.card{
+    border: 1px solid black;
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card > img{
+    width: 100%;
+}
+
+.body{
+    display: flex;
+}
