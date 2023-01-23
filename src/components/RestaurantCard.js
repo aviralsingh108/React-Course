@@ -1,12 +1,6 @@
 import { IMG_CDN_URL } from "../config";
 
 const RestaurantCard = ({ name, cuisines, cloudinaryImageId, avgRating }) => {
-  console.log("inside component", {
-    cloudinaryImageId,
-    name,
-    cuisines,
-    avgRating,
-  });
   return (
     <div className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} />
