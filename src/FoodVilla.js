@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import HeadingComponent from "./components/Header";
+import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 
 const AppLayout = () => {
   return (
     <div>
-      <HeadingComponent />
+      <Header />
       <Body />
       <Footer />
     </div>
