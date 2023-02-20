@@ -54,13 +54,9 @@ const Body = () => {
         </button>
       </div>
       <div className="body">
-        {
-          // if (restaurants?.length === 0) return <h1>No Restaurant to Display</h1>
-          // if (filterRestaurants?.length === 0) return <h1>No Matching Restaurant with such name</h1>
-          filterRestaurants.map((item) => (
-            <RestaurantCard {...item.data} key={item.data.id} />
-          ))
-        }
+        {filterRestaurants.map((item) => (
+          <RestaurantCard {...item.data} key={item.data.id} />
+        ))}
       </div>
     </>
   );
