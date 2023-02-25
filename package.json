@@ -1,12 +1,11 @@
 {
   "name": "js",
   "version": "1.0.0",
-  "homepage": "https://aviralsingh108.github.io/React-Course/",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -20,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/aviralsingh108/React-Course/issues"
   },
+  "homepage": "https://github.com/aviralsingh108/React-Course",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "babel-plugin-transform-remove-console": "^6.9.4",
