@@ -23,7 +23,7 @@ const Cart = () => {
         </button>
       </div>
 
-      <div className="flex">
+      <div className="flex flex-wrap">
         {cartItems.map((item, index) => {
           return <FoodItem {...item} key={index} />;
         })}

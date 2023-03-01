@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../config";
 import useRestaurant from "../utils/useRestaurant";
 import Shimmer from "./Shimmer";
-import { addItem } from "../utils/cartSlice";
+import { addItem, removeItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
@@ -11,6 +11,9 @@ const RestaurantMenu = () => {
   const dispatch = useDispatch();
   const addFoodItem = (item) => {
     dispatch(addItem(item));
+  };
+  const removeFoodItem = (item) => {
+    dispatch(removeItem(item));
   };
   return !restaurantMenu ? (
     <Shimmer />
@@ -33,10 +36,16 @@ const RestaurantMenu = () => {
             <li className="m-2" key={item.id}>
               {item.name} -
               <button
-                className="p-1 ml-2 bg-green-50"
+                className="pl-2 pr-2 ml-2 font-bold text-2xl rounded-full bg-green-50"
                 onClick={() => addFoodItem(item)}
               >
-                Add
+                +
+              </button>
+              <button
+                className="pl-2 pr-2 ml-2 w-8 font-bold text-2xl rounded-full bg-green-50"
+                onClick={() => removeFoodItem(item)}
+              >
+                -
               </button>
             </li>
           ))}
