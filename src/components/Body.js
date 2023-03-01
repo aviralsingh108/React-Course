@@ -13,7 +13,6 @@ const Body = () => {
   const { user, setUser } = useContext(UserContext);
 
   useEffect(() => {
-    console.log("use effect");
     getRestaurants();
   }, []);
 
@@ -22,7 +21,6 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json?.data?.cards[2]?.data?.data?.cards);
     setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }

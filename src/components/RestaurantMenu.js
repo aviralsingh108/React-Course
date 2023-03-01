@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
       </div>
       <div className="p-5">
         <h1 className="font-bold">Menu</h1>
-        {console.log(Object.values(restaurantMenu.menu.items))}
+
         <ul>
           {Object.values(restaurantMenu?.menu?.items).map((item) => (
             <li className="m-2" key={item.id}>
