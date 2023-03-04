@@ -43,7 +43,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="m-10">
-        <h1>{isOnline ? "🟢" : "🔴"}</h1>
+        <h1 data-testid="online-status">{isOnline ? "🟢" : "🔴"}</h1>
       </div>
       <h1 className="p-10 font-bold text-blue-800">{user.name}</h1>
       {isLoggedIn ? (
