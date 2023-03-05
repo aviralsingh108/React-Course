@@ -48,7 +48,7 @@ test("Search for string(food) on homepage", async () => {
       </Provider>
     </StaticRouter>
   );
-  //   await waitFor(() => expect(body.getByTestId("search-btn")));
+  await waitFor(() => expect(body.getByTestId("search-btn")));
   const searchInput = body.getByTestId("search-input");
   fireEvent.change(searchInput, {
     target: { value: "food" },
