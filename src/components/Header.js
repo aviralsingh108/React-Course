@@ -38,7 +38,9 @@ const Header = () => {
             <Link to="/instamart">Instamart</Link>
           </li>
           <li className="px-2">
-            <Link to="/cart">Cart- {cartItems.length} items</Link>
+            <Link data-testid="cart" to="/cart">
+              Cart- {cartItems.length} items
+            </Link>
           </li>
         </ul>
       </div>
