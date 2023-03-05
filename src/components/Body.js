@@ -34,6 +34,7 @@ const Body = () => {
     <>
       <div className="p-5 m-2 my-5 bg-purple-200">
         <input
+          data-testid="search-input"
           className="p-2 m-2 focus:bg-cyan-50 rounded-md w-60"
           type="text"
           placeholder="Search"
@@ -43,6 +44,7 @@ const Body = () => {
           }}
         />
         <button
+          data-testid="search-btn"
           className="p-2 m-2 bg-amber-400 hover:bg-amber-500 text-white rounded-md"
           onClick={() => {
             const data = filterData(searchInput.toLowerCase(), restaurants);
@@ -70,7 +72,7 @@ const Body = () => {
           }
         ></input>
       </div>
-      <div className="flex flex-wrap m-4">
+      <div data-testid="res-list" className="flex flex-wrap m-4">
         {filterRestaurants.map((item) => (
           <Link to={"/restaurant/" + item.data.id} key={item.data.id}>
             <RestaurantCard {...item.data} key={item.data.id} />
